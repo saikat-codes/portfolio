@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import DecryptedText from "@/components/DecryptedText";
 
 export default function Hero() {
   return (
@@ -20,7 +21,16 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
       >
-        Saikat Das<span className="text-accent">.</span>
+        <DecryptedText
+          text="Saikat Das"
+          animateOn="inViewHover"
+          sequential
+          revealDirection="start"
+          speed={80}
+          className="text-primary"
+          encryptedClassName="text-accent"
+        />
+        <span className="text-accent">.</span>
       </motion.h1>
 
       <motion.p
@@ -30,7 +40,7 @@ export default function Hero() {
         transition={{ duration: 0.4, delay: 0.3 }}
       >
         Electrical Engineering undergrad at NIT Durgapur. Developer by choice. I
-        build for the web, learn fast, and ship things that work.
+        build for the web, learn , and ship things that work.
       </motion.p>
 
       <motion.div

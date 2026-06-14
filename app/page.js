@@ -9,7 +9,7 @@ import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
-    <main>
+    <main className="max-w-4xl mx-auto px-6">
       <Navbar />
       <Hero />
       <Projects />
