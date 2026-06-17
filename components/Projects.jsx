@@ -1,92 +1,112 @@
-import FadeUp from '@/components/FadeUp'
+"use client";
+
+import FadeUp from "@/components/FadeUp";
 
 const projects = [
   {
-    name: 'Habit Tracker',
-    desc: 'Full-stack habit tracking app — currently in progress.',
-    stack: ['react', 'vitejs', 'nodejs'],
-    tag: 'in progress',
-    link: 'https://github.com/saikat-codes/habit-tracker_full',
+    name: "Habit Tracker",
+    icon: "📋",
+    desc: "Full-stack habit tracking app — currently in progress.",
+    tag: "in progress",
+    link: "https://github.com/saikat-codes/habit-tracker_full",
+    stack: [
+      { id: "react", name: "react-original.svg" },
+      { id: "vitejs", name: "vitejs-original.svg" },
+      { id: "nodejs", name: "nodejs-original.svg" }
+    ]
   },
   {
-    name: 'Query Management System',
-    desc: 'Full-stack system to manage and route queries with real-time email and Telegram notifications.',
-    stack: ['react', 'nodejs', 'express'],
-    tag: 'full-stack',
-    link: 'https://github.com/saikat-codes/query-management-system',
+    name: "Query Management System",
+    icon: "⚡",
+    desc: "Full-stack system to manage and route queries with real-time email and Telegram notifications.",
+    tag: "full stack",
+    link: "https://github.com/saikat-codes/query-management-system",
+    stack: [
+      { id: "react", name: "react-original.svg" },
+      { id: "nodejs", name: "nodejs-original.svg" },
+      { id: "express", name: "express-original.svg", lightBg: true }
+    ]
   },
   {
-    name: 'Weather App',
-    desc: 'Responsive weather app with real-time data from OpenWeatherMap and city search.',
-    stack: ['html5', 'css3', 'javascript'],
-    tag: 'frontend',
-    link: 'https://github.com/saikat-codes/js-weather',
-  },
-]
-
-const iconMap = {
-  react:      'react/react-original.svg',
-  nodejs:     'nodejs/nodejs-original.svg',
-  express:    'express/express-original.svg',
-  vitejs:     'vitejs/vitejs-original.svg',
-  html5:      'html5/html5-original.svg',
-  css3:       'css3/css3-original.svg',
-  javascript: 'javascript/javascript-original.svg',
-}
-
-// icons that need a light background to be visible
-const needsLightBg = ['express']
-
-const tagStyles = {
-  'in progress': 'border-accent/40 bg-accent/10 text-accent',
-  'full-stack':  'border-border bg-surface text-secondary',
-  'frontend':    'border-border bg-surface text-secondary',
-}
+    name: "Weather App",
+    icon: "🌤",
+    desc: "Responsive weather app with real-time data from OpenWeatherMap and city search.",
+    tag: "frontend",
+    link: "https://github.com/saikat-codes/js-weather",
+    stack: [
+      { id: "html5", name: "html5-original.svg" },
+      { id: "css3", name: "css3-original.svg" },
+      { id: "javascript", name: "javascript-original.svg" }
+    ]
+  }
+];
 
 export default function Projects() {
   return (
-    <section id="work" className="px-6 py-24 max-w-3xl">
+    <section id="work" className="max-w-3xl py-24">
       <FadeUp>
         <p className="font-mono text-sm text-muted mb-2">02 — projects</p>
-        <h2 className="text-3xl font-bold text-primary mb-10">selected work</h2>
+        <h2 className="text-4xl font-bold text-primary mb-12 tracking-tight">selected work</h2>
       </FadeUp>
 
       <div className="flex flex-col">
-        {projects.map((project) => (
-          <FadeUp key={project.name} delay={0.2}>
+        {projects.map((project, index) => (
+          <FadeUp key={project.name} delay={index * 0.08}>
             <a
               href={project.link}
               target="_blank"
               rel="noreferrer"
-              className="group flex justify-between items-center py-5 border-b border-border hover:px-2 transition-all"
+              className="group flex flex-col sm:flex-row sm:items-center justify-between border-b border-border/50 py-7 transition-all duration-300 hover:px-2 gap-4"
             >
-              <div>
-                <h3 className="text-lg font-semibold text-primary group-hover:text-accent transition-colors">
-                  {project.name}
-                </h3>
+              <div className="flex items-start gap-4 flex-1">
+                {/* Project Icon container */}
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border/60 bg-surface/50 text-base shadow-sm transition-colors duration-300 group-hover:border-accent/30 group-hover:bg-surface">
+                  {project.icon}
+                </div>
 
-                <div className="flex gap-2 mt-2">
-                  {project.stack.map((tech) => (
-                    <div
-                      key={tech}
-                      className={`w-7 h-7 rounded-md border border-border flex items-center justify-center ${needsLightBg.includes(tech) ? "bg-white" : "bg-surface"}`}
-                    >
-                      <img
-                        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${iconMap[tech]}`}
-                        alt={tech}
-                        className="w-4 h-4"
-                      />
-                    </div>
-                  ))}
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-primary transition-colors duration-300 group-hover:text-accent">
+                    {project.name}
+                  </h3>
+
+                  <p className="mt-1.5 text-sm text-secondary/80 leading-relaxed max-w-xl">
+                    {project.desc}
+                  </p>
+
+                  {/* Tech stack badges */}
+                  <div className="mt-4 flex gap-2">
+                    {project.stack.map((tech) => (
+                      <div
+                        key={tech.id}
+                        className={`flex h-7 w-7 items-center justify-center rounded-md border border-border/60 shadow-sm ${
+                          tech.lightBg ? "bg-white p-0.5" : "bg-surface/40"
+                        }`}
+                        title={tech.id}
+                      >
+                        <img
+                          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.id}/${tech.name}`}
+                          alt={tech.id}
+                          className="h-4 w-4 object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
+
+              {/* Status Pill Badge & Animated Arrow */}
+              <div className="flex items-center justify-between sm:justify-end gap-3 shrink-0 self-end sm:self-center w-full sm:w-auto pt-2 sm:pt-0">
                 <span
-                  className={`text-xs border rounded-full px-3 py-1 font-medium ${tagStyles[project.tag]}`}
+                  className={`rounded-full border px-3 py-0.5 text-[11px] font-mono font-medium uppercase tracking-wider ${
+                    project.tag === "in progress"
+                      ? "border-emerald-500/20 bg-emerald-500/5 text-emerald-400"
+                      : "border-accent/20 bg-accent/5 text-accent"
+                  }`}
                 >
                   {project.tag}
                 </span>
-                <span className="text-muted group-hover:text-accent transition-colors">
+
+                <span className="text-muted/80 font-semibold transition-transform duration-300 transform group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 select-none">
                   ↗
                 </span>
               </div>
@@ -95,14 +115,17 @@ export default function Projects() {
         ))}
       </div>
 
-      <a
-        href="https://github.com/saikat-codes"
-        target="_blank"
-        rel="noreferrer"
-        className="inline-block mt-8 text-sm text-secondary hover:text-accent transition-colors"
-      >
-        view all on github →
-      </a>
+      <FadeUp delay={0.3}>
+        <a
+          href="https://github.com/saikat-codes"
+          target="_blank"
+          rel="noreferrer"
+          className="group mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-secondary transition-colors hover:text-accent"
+        >
+          view all on github
+          <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </a>
+      </FadeUp>
     </section>
   );
 }
