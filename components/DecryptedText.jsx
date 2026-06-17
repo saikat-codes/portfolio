@@ -11,7 +11,7 @@ export default function DecryptedText({
   sequential = false,
   revealDirection = 'start',
   useOriginalCharsOnly = false,
-  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*_+零一二三四五六七八九十目耳信息ド技術暗号破壊変換マトリッキョウサイ',
+  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%&零三四五六七八九十目耳信息ド技術暗号破壊変換マトリッキョウサイ',
   className = '',
   parentClassName = '',
   encryptedClassName = '',

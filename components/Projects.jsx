@@ -97,7 +97,7 @@ export default function Projects() {
               {/* Status Pill Badge & Animated Arrow */}
               <div className="flex items-center justify-between sm:justify-end gap-3 shrink-0 self-end sm:self-center w-full sm:w-auto pt-2 sm:pt-0">
                 <span
-                  className={`rounded-full border px-3 py-0.5 text-[11px] font-mono font-medium uppercase tracking-wider ${
+                  className={`rounded-full border px-3 py-0.5 text-[11px] font-mono font-medium tracking-wider ${
                     project.tag === "in progress"
                       ? "border-emerald-500/20 bg-emerald-500/5 text-emerald-400"
                       : "border-accent/20 bg-accent/5 text-accent"
@@ -120,7 +120,7 @@ export default function Projects() {
           href="https://github.com/saikat-codes"
           target="_blank"
           rel="noreferrer"
-          className="group mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-secondary transition-colors hover:text-accent"
+          className="group mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-secondary transition-colors hover:text-accent font-mono"
         >
           view all on github
           <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
