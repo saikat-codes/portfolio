@@ -5,12 +5,10 @@ import Skills from '@/components/Skills'
 import Github from '@/components/Github'
 import About from '@/components/About'
 import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
-    <main className="max-w-4xl mx-auto px-6">
-      <Navbar />
+    <main className="relative z-10 max-w-4xl mx-auto px-6">
       <Hero />
       <Projects />
       <Journey />
@@ -19,5 +17,5 @@ export default function Home() {
       <About />
       <Footer />
     </main>
-  )
+  );
 }
