@@ -38,9 +38,9 @@ export default function RootLayout({ children }) {
           <div className="absolute inset-0" style={{ filter: "blur(5px)" }}>
             <Particles
               particleCount={200}
-              speed={0.3}
-              particleSpread={9}
-              cameraDistance={10}
+              speed={0.2}
+              particleSpread={6}
+              cameraDistance={15}
               particleBaseSize={120}
               sizeRandomness={1.5}
               alphaParticles={false}

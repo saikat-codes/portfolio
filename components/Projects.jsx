@@ -24,7 +24,7 @@ const projects = [
     stack: [
       { id: "react", name: "react-original.svg" },
       { id: "nodejs", name: "nodejs-original.svg" },
-      { id: "express", name: "express-original.svg", lightBg: true }
+      { id: "express", name: "express-original.svg", lightBg: true },
     ]
   },
   {
@@ -78,7 +78,7 @@ export default function Projects() {
                     {project.stack.map((tech) => (
                       <div
                         key={tech.id}
-                        className={`flex h-7 w-7 items-center justify-center rounded-md border border-border/60 shadow-sm ${
+                        className={`flex h-7 w-7 items-center justify-center rounded-sm border border-border/60 shadow-sm ${
                           tech.lightBg ? "bg-white p-0.5" : "bg-surface/40"
                         }`}
                         title={tech.id}
