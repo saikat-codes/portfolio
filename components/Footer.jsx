@@ -38,7 +38,7 @@ export default function Footer() {
     },
     {
       href: "mailto:sd.25u10707@nitdgp.ac.in",
-      title: "Institute Email — NIT Durgapur",
+      title: "Institute Email",
       icon: (
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" className="transition-transform duration-300 group-hover:scale-105">
           <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
@@ -68,7 +68,7 @@ export default function Footer() {
             let&apos;s talk<span className="text-accent">.</span>
           </h2>
 
-          {/* Social Icons Row with Integrated Border Glow wrappers */}
+
           <div className="flex flex-wrap gap-3">
             {socials.map((social) => (
               <BorderGlow

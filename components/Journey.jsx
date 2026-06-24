@@ -4,7 +4,7 @@ import FadeUp from "@/components/FadeUp";
 
 const journey = [
   { year: "2025", text: "Started web dev — HTML, CSS, JavaScript fundamentals.", current: false },
-  { year: "Sep 2025", text: "Joined NIT Durgapur (Electrical Engineering). Continued building in parallel.", current: false },
+  { year: "Aug 2025", text: "Joined NIT Durgapur (Electrical Engineering). Continued building in parallel.", current: false },
   { year: "Jan 2026", text: "React, React Router — built solid frontend projects.", current: false },
   { year: "May 2026", text: "Started DSA and backend — Node.js, Express, MongoDB.", current: false },
   { year: "Now", text: "Building full-stack projects end to end.", current: true },

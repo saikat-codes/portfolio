@@ -64,8 +64,7 @@ export default function Hero() {
           className="text-base sm:text-lg text-secondary/90 leading-relaxed mb-10 max-w-xl"
         >
           Electrical Engineering undergrad at{" "}
-          <span className="text-primary font-medium border-b border-border/60 pb-0.5">NIT Durgapur</span>.
-          Developer by choice. I build for the web, learn, and ship things that work.
+          <span className="text-primary font-medium border-b border-border/60 pb-0.5">NIT Durgapur</span>. I build for the web, learn, and create things that work.
         </motion.p>
 
         {/* Action Callouts with Amber Border Glows */}

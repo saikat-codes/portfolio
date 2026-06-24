@@ -3,11 +3,23 @@
 import FadeUp from "@/components/FadeUp";
 
 const projects = [
+  // {
+  //   name: "new project",
+  //   icon: "📋",
+  //   desc: "Full-stack habit tracking app — currently in progress.",
+  //   tag: "in progress",
+  //   link: "https://github.com/saikat-codes/repo-name",
+  //   stack: [
+  //     { id: "react", name: "react-original.svg" },
+  //     { id: "vitejs", name: "vitejs-original.svg" },
+  //     { id: "nodejs", name: "nodejs-original.svg" }
+  //   ]
+  // },
   {
     name: "Habit Tracker",
     icon: "📋",
     desc: "Full-stack habit tracking app — currently in progress.",
-    tag: "in progress",
+    tag: "in progress", // change to "full stack" when done
     link: "https://github.com/saikat-codes/habit-tracker_full",
     stack: [
       { id: "react", name: "react-original.svg" },
@@ -60,7 +72,7 @@ export default function Projects() {
             >
               <div className="flex items-start gap-4 flex-1">
                 {/* Project Icon container */}
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border/60 bg-surface/50 text-base shadow-sm transition-colors duration-300 group-hover:border-accent/30 group-hover:bg-surface">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-border/60 bg-surface/50 text-base shadow-sm transition-colors duration-300 group-hover:border-accent/30 group-hover:bg-surface">
                   {project.icon}
                 </div>
 
