@@ -2,6 +2,7 @@
 
 import BorderGlow from "@/components/BorderGlow";
 import FadeUp from "@/components/FadeUp";
+import Image from "next/image";
 
 const skillGroups = [
   {
@@ -21,6 +22,7 @@ const skillGroups = [
       { name: "Tailwind", icon: "tailwindcss/tailwindcss-original.svg" },
       { name: "Node.js", icon: "nodejs/nodejs-original.svg" },
       { name: "Express", icon: "express/express-original.svg", lightBg: true },
+      { name: "Framer Motion", icon: "framermotion/framermotion-original.svg",lightBg: true },
     ],
   },
   {
@@ -73,13 +75,15 @@ export default function Skills() {
                       <div
                         className={`w-5 h-5 rounded flex items-center justify-center transition-transform group-hover:scale-105 ${skill.lightBg ? "bg-white p-0.5" : ""}`}
                       >
-                        <img
+                        <Image
+                          width={20}
+                          height={20}
                           src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.icon}`}
                           alt={skill.name}
                           className="w-4 h-4 object-contain"
                         />
                       </div>
-                      <span className="text-sm font-medium text-secondary group-hover:text-primary transition-colors">
+                      <span className="text-[14px] font-semibold text-secondary group-hover:text-primary transition-colors font-mono">
                         {skill.name}
                       </span>
                     </div>

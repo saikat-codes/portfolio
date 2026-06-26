@@ -10,7 +10,7 @@ export default function About() {
         <FadeUp delay={0.1}>
           <div>
             <p className="font-mono text-sm text-muted mb-2">06 — about</p>
-            <h2 className="text-2xl font-bold text-primary mb-4 tracking-tight">
+            <h2 className="text-3xl font-bold text-primary mb-4 tracking-tight">
               a bit about me
             </h2>
             <p className="text-secondary leading-relaxed text-[16px]">
@@ -28,7 +28,7 @@ export default function About() {
         <FadeUp delay={0.2}>
           <div>
             <p className="font-mono text-sm text-muted mb-2">07 — right now</p>
-            <h2 className="text-2xl font-bold text-primary mb-4 tracking-tight">
+            <h2 className="text-3xl font-bold text-primary mb-4 tracking-tight">
               currently
             </h2>
 
