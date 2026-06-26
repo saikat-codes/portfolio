@@ -21,15 +21,15 @@ const skillGroups = [
       { name: "React", icon: "react/react-original.svg" },
       { name: "Tailwind", icon: "tailwindcss/tailwindcss-original.svg" },
       { name: "Node.js", icon: "nodejs/nodejs-original.svg" },
-      { name: "Express", icon: "express/express-original.svg", lightBg: true },
-      { name: "Framer Motion", icon: "framermotion/framermotion-original.svg",lightBg: true },
+      { name: "Express", icon: "express/express-original.svg", invert: true  },
+      { name: "Framer Motion", icon: "framermotion/framermotion-original.svg", invert: true },
     ],
   },
   {
     label: "tools & platforms",
     skills: [
       { name: "Git", icon: "git/git-original.svg" },
-      { name: "GitHub", icon: "github/github-original.svg", lightBg: true },
+      { name: "GitHub", icon: "github/github-original.svg",invert: true },
       { name: "MongoDB", icon: "mongodb/mongodb-original.svg" },
       { name: "VS Code", icon: "vscode/vscode-original.svg" },
       { name: "Linux", icon: "linux/linux-original.svg", lightBg: true },
@@ -78,9 +78,9 @@ export default function Skills() {
                         <Image
                           width={20}
                           height={20}
-                          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill.icon}`}
+                          src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.icon}`}
                           alt={skill.name}
-                          className="w-4 h-4 object-contain"
+                          className={`w-4 h-4 object-contain ${skill.invert ? "invert brightness-200" : ""}`}
                         />
                       </div>
                       <span className="text-[14px] font-semibold text-secondary group-hover:text-primary transition-colors font-mono">
