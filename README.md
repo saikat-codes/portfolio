@@ -1,4 +1,4 @@
-# saikat.dev — Personal Portfolio
+# Personal Portfolio
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC?style=flat-square&logo=tailwind-css)
